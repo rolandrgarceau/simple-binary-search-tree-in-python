@@ -18,7 +18,7 @@ So some of the conditions we will be checking will be while not full or not comp
 
 For myself, implementing print was a tricky way to refresh on recursion. Modern coding obfuscates the tedious stuff. Getting to a base case and then popping was is fun to draw out, even when learning this over a decade ago. The first shot at print did not include a height variable passed around to allow a visual of what the tree really looked like, because it was printing values in order, instead of by height. 
 
-This can lead us down a path of really not being able to visualize where insertions are taking place, especially when using the fill_tree() which randomly adds values. There exists a cli tree printer that makes things look oh so pretty... lack of confidence is a path to the dark side padawan.
+This can lead us down a path of really not being able to visualize where insertions are taking place, especially when using the fill_tree() which randomly adds values. There exists a cli tree printer that makes things look oh so pretty... 
 
 So we can go back and add a height variable into the print method and draw out the tree after filling it. The next step would be instead of just adding in the variable, figure out how to implement a decorator to the print function adding in a variable for height that way. Steps would be to comment out the added height variable lines, add in the @decorator functionality, and test. 
 
