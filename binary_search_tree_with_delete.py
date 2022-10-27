@@ -7,7 +7,7 @@ from random import randint
 PRINT = True
 V_PRINT = True
 
-class node:
+class Node:
     # def __init__(self, value: None) -> None:
     def __init__(self, value: None):
         self.value = value
@@ -15,7 +15,7 @@ class node:
         self.right_child = None
         self.parent = None
 
-class binary_search_tree:
+class Binary_search_tree:
     # def __init__(self) -> None:
     def __init__(self):
         # declare root on first add
@@ -26,7 +26,7 @@ class binary_search_tree:
         if self.root == None:
             if PRINT:
                 print(f'root set at {value}')
-            self.root = node(value)
+            self.root = Node(value)
         else: # private funtion to handle
             # no longer root, we need to do checking
             self._insert(value, self.root)
@@ -38,7 +38,7 @@ class binary_search_tree:
             # does it have a child
             if cur_node.left_child == None:
                 # create one and set it
-                cur_node.left_child = node(value)
+                cur_node.left_child = Node(value)
                 cur_node.left_child.parent = cur_node
                 if V_PRINT:
                     print(f'inserting: {value} to left_child of parent: {cur_node.left_child.parent.value}')
@@ -47,7 +47,7 @@ class binary_search_tree:
         elif value > cur_node.value: # greater value
             if cur_node.right_child == None:
                 # create one and set it
-                cur_node.right_child = node(value)
+                cur_node.right_child = Node(value)
                 cur_node.right_child.parent = cur_node
                 if V_PRINT:
                     print(f'inserting: {value} to right_child of parent: {cur_node.right_child.parent.value}')
@@ -226,7 +226,7 @@ def fill_tree(tree, num_eles=20, max_int=100 ):
         tree.insert(cur_ele)
     return tree
 # test code
-bst = binary_search_tree()
+bst = Binary_search_tree()
 # bst.p_tree() 
 RANGE=10
 MAX_RAND_VAL=50
