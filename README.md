@@ -1,12 +1,12 @@
 # simple-binary-search-tree-in-python
 
-A Refresher tutorial for keeping skills up to date.
+This one was just for fun.
 
 ## Binary Search Tree (BST)
 
 This implementation assumes values within node to be integers. In considering methods to implement we need to predicate the details based on type of trees we wish to work with- aiming for 'complete' trees to become 'full'-ly height balanced and sorted with self-balancing search trees being way more labor and logic intensive to implement. KISS this one hello if not looking for all the best practices:) [Here's conda's link](https://anaconda.org/conda-forge/binarytree) for binarytree module.
 
-## Big Oh face
+## Big Oh 
 
 Just food for thought- if we continually just add integers that are numerically increasing to the end we effectively have a linked list, and thats OOOOOOOOH(n); where we are attempting to get better logarithmic results using BST. So average is logn performance for most operations like access, add, delete, and search, worst case O(n) for the linked list like operation.
 
